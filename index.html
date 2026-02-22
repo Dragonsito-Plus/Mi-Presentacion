@@ -86,9 +86,9 @@
             width: 120px; height: 120px; 
             border-radius: 30px; 
             border: 6px solid var(--card-bg); 
-            object-fit: contain; /* Cambiado a contain para que el logo se vea completo */
+            object-fit: contain;
             background: #1e293b;
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); /* Brillo suave para el logo */
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
         }
 
         .content { padding: 30px; }
@@ -193,7 +193,7 @@
                 <h3>Showcase 3D</h3>
                 <div class="model-box">
                     <button class="nav-btn" id="prev-btn">&#10094;</button>
-                    <model-viewer id="main-viewer" src="Cat Strawberry.glb" camera-controls auto-rotate shadow-intensity="1">
+                    <model-viewer id="main-viewer" src="Cat Strawberry.glb" camera-controls auto-rotate shadow-intensity="1" environment-image="neutral">
                     </model-viewer>
                     <div class="model-caption" id="model-name">Modelo: Cat Strawberry</div>
                     <button class="nav-btn" id="next-btn">&#10095;</button>
@@ -211,7 +211,7 @@
     </div>
 
     <script>
-        // LÓGICA VISOR 3D
+        // LÓGICA VISOR 3D ACTUALIZADA
         const models = ["Cat Strawberry.glb", "Just a Girl.glb", "Fungus Girl.glb"];
         let currentModelIndex = 0;
         const viewer = document.getElementById('main-viewer');
